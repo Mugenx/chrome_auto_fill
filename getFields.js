@@ -11,17 +11,17 @@ function getFields(document) {
 
 function parser(arr) {
     var collection = [];
-    var caption;
-    var value;
-    $.each(arr, function (index, value) {
-        if (value.name != '') {
-            fieldCaption = ($('label[for=' + value.name + ']').text()).replace('*', '');
-            fieldName = value.name;
-            fieldValue = value.value;
+    $.each(arr, function (index, key) {
+        if (key.name != '') {
+            fieldCaption = ($('label[for=' + key.name + ']').text()).replace('*', '');
+            fieldName = key.name;
+            fieldValue = key.value;
+            fieldType = key.type;
             var element = {
                 name: fieldName,
                 caption: fieldCaption,
-                value: fieldValue
+                value: fieldValue,
+                type: fieldType
             };
             collection.push(element);
         }
