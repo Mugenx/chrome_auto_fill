@@ -1,0 +1,36 @@
+{
+  "name": "Get Page Source",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Build an Extension!",
+  "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+  "options_page": "options.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "jquery.min.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": [
+      "jquery.min.js",
+      "popup.js"
+    ]
+  }, {
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": [
+      "lodash.js",
+      "setFields.js"
+    ]
+  }]
+}
