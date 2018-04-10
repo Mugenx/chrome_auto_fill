@@ -10,7 +10,7 @@
   },
   "background": {
     "scripts": [
-      "jquery.min.js",
+      "public/js/jquery.min.js",
       "background.js"
     ]
   },
@@ -20,7 +20,7 @@
       "https://*/*"
     ],
     "js": [
-      "jquery.min.js",
+      "public/js/jquery.min.js",
       "popup.js"
     ]
   }, {
@@ -29,7 +29,7 @@
       "https://*/*"
     ],
     "js": [
-      "lodash.js",
+      "public/js/lodash.js",
       "setFields.js"
     ]
   }]
